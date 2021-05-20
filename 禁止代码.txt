@@ -1,0 +1,90 @@
+# 禁止右键菜单和左键选择
+<body topmargin="0" oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" onselect="document.selection.empty()" oncopy="document.selection.empty()" onbeforecopy="return false" onmouseup="document.selection.empty()">
+</body>
+
+
+# 禁止右键菜单和左键选择
+<body oncontextmenu=self.event.returnValue=false onselectstart="return false"> </body>
+
+ <script> 
+    function clear(){ 
+        Source=document.body.firstChild.data; 
+        document.open(); 
+        document.close(); 
+        document.title="看不到源代码"; 
+        document.body.innerHTML=Source; 
+    }
+</script> 
+
+
+# 禁用键盘
+<script>
+    document.onkeydown = function () {
+        if (window.event && window.event.keyCode == 123) {
+            alert("F12被禁用");
+            event.keyCode = 0;
+            event.returnValue = false;
+        }
+        if (window.event && window.event.keyCode == 13) {
+            window.event.keyCode = 505;
+        }
+        if (window.event && window.event.keyCode == 8) {
+            alert(str + "\n请使用Del键进行字符的删除操作！");
+            window.event.returnValue = false;
+        }
+    }
+
+window.onload = function () {
+	document.onkeydown = function () {
+		var e = window.event || arguments[0];
+		//屏蔽F12
+		if (e.keyCode == 123) {
+
+			return false;
+			//屏蔽Ctrl+Shift+I
+		} else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+
+			return false;
+			//屏蔽Shift+F10
+		} else if ((e.shiftKey) && (e.keyCode == 121)) {
+			return false;
+		}
+	};
+	//屏蔽右键单击
+	document.oncontextmenu = function () {
+		return false;
+	}
+}
+
+    window.onkeydown = window.onkeyup = window.onkeypress = function () {
+    window.event.returnValue = false;
+        return false;
+    }
+</script>
+
+
+# 密码登录
+<SCRIPT language=JavaScript> function password() { var testV = 1; var pass1 = prompt('请输入密码:',''); while (testV < 3) { if (!pass1) history.go(-1); if (pass1 == "aucopo") { alert('密码正确!'); break; } testV+=-1; var pass1 = prompt('密码错误!请重新输入:'); } if (pass1!="password" & testV ==3) history.go(-1); return " "; } document.write(password()); </SCRIPT>
+
+
+
+# 禁用开发者工具，放在后面
+<script>
+var threshold = 160; // 打开控制台的宽或高阈值
+// 每秒检查一次
+var check = setInterval(function() {
+if (window.outerWidth - window.innerWidth > threshold ||
+window.outerHeight - window.innerHeight > threshold) {
+// 如果打开控制台，则刷新页面
+window.location.reload();
+
+
+#禁用所有，放后面
+<script src='https://cdn.jsdelivr.net/npm/disable-devtool/disable-devtool.min.js'></script>
+<script 
+    disable-devtool-auto
+    src='https://cdn.jsdelivr.net/npm/disable-devtool/disable-devtool.min.js'>
+</script>
+}
+}, 1000);
+</script>
