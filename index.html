@@ -12,7 +12,12 @@ document.title="看不到源代码"; //文档标题
 document.body.innerHTML=Source; //重新写入旧内容
 }
 </script>
-
+<script type="text/javascript">
+        function stop() {
+            return false;
+        }
+        document.oncontextmenu = stop;
+    </script>
     <SCRIPT language=JavaScript> function password() { var testV = 1; var pass1 = prompt('请输入密码:',''); while (testV < 3) { if (!pass1) history.go(-1); if (pass1 == "aucopo") { alert('密码正确!'); break; } testV+=-1; var pass1 = prompt('密码错误!请重新输入:'); } if (pass1!="password" & testV ==3) history.go(-1); return " "; } document.write(password()); </SCRIPT>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 
