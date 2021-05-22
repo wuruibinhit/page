@@ -2,7 +2,7 @@
 <html>
 <head>
 <script>
-    function clear(){
+    function clear(){  
         Source=document.body.firstChild.data;
         document.open();
         document.close();
@@ -786,8 +786,9 @@ if (window.outerWidth - window.innerWidth > threshold ||
 window.outerHeight - window.innerHeight > threshold) {
 // 如果打开控制台，则刷新页面
 window.location.reload();
+
 }
-}, 1000);
+}, 500);
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
@@ -798,7 +799,7 @@ window.location.reload();
 		#category a{
 			text-decoration: none; 
 			color: steelblue;
-<!--			font-family: fantasy;-->
+            /*font-family: fantasy;>*/
 		}
 		/* #category {line-height: 2em;} */
 		.newh{
